@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+.carousel {
+  width: 678px;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 15px;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+
+.heading {
+  font-size: 3rem;
+  margin: 4rem auto;
+
+}
+
+.carousel-inner {
+  min-width: 400%;
+  display: flex;
+  flex-wrap: row;
+  height: 400px;
+}
+
+.carousel-item {
+  height: 100%;
+  flex: 1;
+  position: relative;
+}
+
+.carousel-item > p {
+  font-size: 3rem;
+  font-weight: 600;
+  color: rgba(85, 85, 85, 0.58);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.prev, .next {
+  font-size: 1.6rem;
+}
+
+.indicators {
+  position: absolute;
+  left: 50%;
+  bottom: 25px;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: flex-start
+}
+
+.indicators > span {
+  height: 5px;
+  width: 30px;
+  border-radius: 3px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.301);
+}
+
+.indicators > span.active {
+  background-color: transparent;
+  width: 50px;
+}
+
+.indicators > span::before {
+  content: "";
+  display: block;
+  height: 5px;
+  width: 30px;
+}
+
+.indicators > span.active::before {
+  width: 50px;
+  background-color: #fff;
+  transition: width .3s linear, background-color .1s linear;
+  border-radius: 3px;
+}
+
+.indicators > span:not(span:first-child) {
+  margin-left: 5px;
+}
+
+.indicators > span:hover {
+  cursor: pointer;
+}
+
+.prev, .next {
+  color: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 4.5rem;
+  cursor: pointer;
+}
+
+.prev > i, .next > i {
+  display: block;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev {
+  left: 10px;
+}
